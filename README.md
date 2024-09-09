@@ -2,4 +2,4 @@
 ```
 grep ':' /etc/passwd | cut -d':' -f1 | sort
 ```
-![image](https://github.com/user-attachments/assets/b4288499-70a0-449f-b931-9089c7511416)
+![image](https://github.com/user-attachments/assets/77f2276a-e122-4db4-8f6e-41ad8e1da139)
