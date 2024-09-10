@@ -29,4 +29,5 @@ do
 echo -n "-"
 done
 echo "+"
+```
 ![image](https://github.com/AlexHend/prac1/blob/main/zadan2.png)
