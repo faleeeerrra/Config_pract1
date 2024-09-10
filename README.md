@@ -30,4 +30,4 @@ echo -n "-"
 done
 echo "+"
 ```
-![image](https://github.com/AlexHend/prac1/blob/main/zadan2.png)
+![image](https://github.com/faleeeerrra/Config_pract1/blob/main/image.png)
