@@ -148,3 +148,27 @@ find /home/user/documents -type f -exec md5sum {} + | sort | uniq -w32 -d
 tar -czvf archive.tar.gz $(find . -type f -name "*.txt")
 ```
 ![image](https://github.com/user-attachments/assets/ad195df5-2652-47a1-8035-355ba233b0d9)
+
+# Task 9
+Написать программу, которая заменяет в файле последовательности из 4 пробелов на символ табуляции. Входной и выходной файлы задаются аргументами.
+***
+```
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 input_file output_file"
+    exit 1
+fi
+
+input_file="$1"
+output_file="$2"
+
+if [ ! -f "$input_file" ]; then
+    echo "Error: Input file '$input_file' does not exist."
+    exit 1
+fi
+
+sed 's/    /\t/g' "$input_file" > "$output_file"
+```
+
+# Task 10
