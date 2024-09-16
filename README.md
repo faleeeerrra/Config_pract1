@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f3bf3c9c-ebec-4d78-8aab-dda465c2a7db)# Task1
+# Task1
 ```
 grep ':' /etc/passwd | cut -d':' -f1 | sort
 ```
@@ -40,3 +40,7 @@ grep -o '\b[a-zA-Z_][a-zA-Z0-9_]*\b' hello.py | sort | uniq
 ```
 ![image](https://github.com/user-attachments/assets/8ec2d314-deba-4f0f-9e51-b3762efe5b7b)
 ***
+
+# Task 5
+
+
