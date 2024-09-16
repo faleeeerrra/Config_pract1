@@ -174,3 +174,9 @@ sed 's/    /\t/g' "$input_file" > "$output_file"
 
 
 # Task 10
+Написать программу, которая выводит названия всех пустых текстовых файлов в указанной директории. Директория передается в программу параметром.
+***
+```
+find "/home/user/documents" -type f -name "*.txt" -exec bash -c '[[ $(wc -c < "$1") -eq 0 ]] && echo "$1" ' _ {} \;
+```
+![image](https://github.com/user-attachments/assets/afd362cf-3cc6-44c9-813b-fdf95f900eeb)
