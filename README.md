@@ -42,5 +42,45 @@ grep -o '\b[a-zA-Z_][a-zA-Z0-9_]*\b' hello.py | sort | uniq
 ***
 
 # Task 5
+Написать программу для регистрации пользовательской команды (правильные права доступа и копирование в /usr/local/bin).
+
+Например, пусть программа называется reg:
+
+```./reg banner```
+В результате для banner задаются правильные права доступа и сам banner копируется в /usr/local/bin.
+```
+#!/bin/bash
+ 
+if [ "$#" -ne 1 ]; then
+        echo "Использование: $0 <имя_файла>"
+        exit 1
+fi
+ 
+COMMAND=$1
+ 
+ 
+if [ ! -f "$COMMAND" ]; then
+        echo "Ошибка: файл $COMMAND не существует."
+        exit 1
+fi
+ 
+sudo cp "$COMMAND" /usr/local/bin/
+ 
+if [ $? -ne 0 ]; then
+        echo "Ошибка: не удалось скопировать файл в /usr/local/bin."
+        exit 1
+fi
+ 
+sudo chmod 755 /usr/local/bin/"$COMMAND"
+ 
+if [ $? -ne 0 ]; then
+        echo "Ошибка: не удалось установить права доступа."
+        exit 1
+fi
+ 
+echo "Команда $COMMAND успешно зарегистрирована в /usr/local/bin."
+```
+![image](https://github.com/user-attachments/assets/df90b789-6011-467e-b566-6560b36ef5dd)
+***
 
 
