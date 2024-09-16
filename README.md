@@ -1,5 +1,6 @@
 # Task1
 Вывести отсортированный в алфавитном порядке список имен пользователей в файле passwd (вам понадобится grep).
+***
 ```
 grep ':' /etc/passwd | cut -d':' -f1 | sort
 ```
@@ -16,6 +17,7 @@ grep ':' /etc/passwd | cut -d':' -f1 | sort
 139 hip
 138 manet
 ```
+***
 ```
 cat /etc/protocols | awk '{print $2, $1}' | sort -nr | head -5
 ```
