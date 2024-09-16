@@ -110,3 +110,24 @@ echo "Команда $COMMAND успешно зарегистрирована в
 ***
 
 
+# Task 6
+Написать программу для проверки наличия комментария в первой строке файлов с расширением c, js и py.
+***
+```
+check_comment() {
+        local file=$1 local first_line=$(head -n 1 "$file")
+        if [[ "$first_line" =~ ^[[:space:]]*# ]]; then
+                echo "Файл $file: Комментарий найден"
+        else
+                echo "Файл $file: Комментарий не найден"
+        fi
+}
+for ext in c js py; do
+        for file in *."$ext"; do
+                if [ -f "$file" ]; then
+                        check_comment "$file"
+                fi
+        done
+done
+```
+![image](https://github.com/user-attachments/assets/7c2b529e-8c9e-4185-9bd4-7bf4250ca395)
