@@ -1,4 +1,5 @@
 # Task1
+Вывести отсортированный в алфавитном порядке список имен пользователей в файле passwd (вам понадобится grep).
 ```
 grep ':' /etc/passwd | cut -d':' -f1 | sort
 ```
@@ -6,6 +7,15 @@ grep ':' /etc/passwd | cut -d':' -f1 | sort
 ***
 
 # Task2
+Вывести данные /etc/protocols в отформатированном и отсортированном порядке для 5 наибольших портов, как показано в примере ниже:
+```
+[root@localhost etc]# cat /etc/protocols ...
+142 rohc
+141 wesp
+140 shim6
+139 hip
+138 manet
+```
 ```
 cat /etc/protocols | awk '{print $2, $1}' | sort -nr | head -5
 ```
@@ -13,6 +23,14 @@ cat /etc/protocols | awk '{print $2, $1}' | sort -nr | head -5
 ***
 
 # Task 3
+Написать программу banner средствами bash для вывода текстов, как в следующем примере (размер баннера должен меняться!):
+```
+[root@localhost ~]# ./banner "Hello from RTU MIREA!"
++-----------------------+
+| Hello from RTU MIREA! |
++-----------------------+
+```
+Перед отправкой решения проверьте его в ShellCheck на предупреждения.
 ```
 #!/bin/bash
 text=$1
@@ -35,6 +53,12 @@ echo "+"
 ***
 
 # Task4
+Написать программу для вывода всех идентификаторов (по правилам C/C++ или Java) в файле (без повторений).
+
+Пример для hello.c:
+```
+h hello include int main n printf return stdio void world
+```
 ```
 grep -o '\b[a-zA-Z_][a-zA-Z0-9_]*\b' hello.py | sort | uniq
 ```
