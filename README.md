@@ -140,3 +140,11 @@ echo "Содержимое файла" > /home/user/documents/файл2.txt
 find /home/user/documents -type f -exec md5sum {} + | sort | uniq -w32 -d
 ```
 ![image](https://github.com/user-attachments/assets/91b367ea-55e2-412d-83db-c8ceac6520bc)
+
+# Task 8
+Написать программу, которая находит все файлы в данном каталоге с расширением, указанным в качестве аргумента и архивирует все эти файлы в архив tar.
+***
+```
+tar -czvf archive.tar.gz $(find . -type f -name "*.txt")
+```
+![image](https://github.com/user-attachments/assets/ad195df5-2652-47a1-8035-355ba233b0d9)
