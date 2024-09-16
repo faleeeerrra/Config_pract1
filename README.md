@@ -33,6 +33,7 @@ cat /etc/protocols | awk '{print $2, $1}' | sort -nr | head -5
 +-----------------------+
 ```
 Перед отправкой решения проверьте его в ShellCheck на предупреждения.
+***
 ```
 #!/bin/bash
 text=$1
@@ -61,6 +62,7 @@ echo "+"
 ```
 h hello include int main n printf return stdio void world
 ```
+***
 ```
 grep -o '\b[a-zA-Z_][a-zA-Z0-9_]*\b' hello.py | sort | uniq
 ```
@@ -75,6 +77,7 @@ grep -o '\b[a-zA-Z_][a-zA-Z0-9_]*\b' hello.py | sort | uniq
 ./reg banner
 ```
 В результате для banner задаются правильные права доступа и сам banner копируется в /usr/local/bin.
+***
 ```
 #!/bin/bash
  
