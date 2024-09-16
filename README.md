@@ -170,5 +170,7 @@ fi
 
 sed 's/    /\t/g' "$input_file" > "$output_file"
 ```
+![image](https://github.com/user-attachments/assets/ee9b32b3-8ef9-43a0-af50-155c4aea8620)
+
 
 # Task 10
