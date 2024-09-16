@@ -5,7 +5,6 @@
 grep ':' /etc/passwd | cut -d':' -f1 | sort
 ```
 ![image](https://github.com/user-attachments/assets/77f2276a-e122-4db4-8f6e-41ad8e1da139)
-***
 
 # Task2
 Вывести данные /etc/protocols в отформатированном и отсортированном порядке для 5 наибольших портов, как показано в примере ниже:
@@ -22,7 +21,6 @@ grep ':' /etc/passwd | cut -d':' -f1 | sort
 cat /etc/protocols | awk '{print $2, $1}' | sort -nr | head -5
 ```
 ![image](https://github.com/user-attachments/assets/2a97764c-2e40-4820-bd2a-a87e6fb6a3d4)
-***
 
 # Task 3
 Написать программу banner средствами bash для вывода текстов, как в следующем примере (размер баннера должен меняться!):
@@ -53,7 +51,6 @@ done
 echo "+"
 ```
 ![image](https://github.com/faleeeerrra/Config_pract1/blob/main/image.png)
-***
 
 # Task4
 Написать программу для вывода всех идентификаторов (по правилам C/C++ или Java) в файле (без повторений).
@@ -67,7 +64,6 @@ h hello include int main n printf return stdio void world
 grep -o '\b[a-zA-Z_][a-zA-Z0-9_]*\b' hello.py | sort | uniq
 ```
 ![image](https://github.com/user-attachments/assets/8ec2d314-deba-4f0f-9e51-b3762efe5b7b)
-***
 
 # Task 5
 Написать программу для регистрации пользовательской команды (правильные права доступа и копирование в /usr/local/bin).
