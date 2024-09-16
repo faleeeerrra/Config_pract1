@@ -129,3 +129,14 @@ for ext in c js py; do
 done
 ```
 ![image](https://github.com/user-attachments/assets/7c2b529e-8c9e-4185-9bd4-7bf4250ca395)
+
+# Task 7
+Написать программу для нахождения файлов-дубликатов (имеющих 1 или более копий содержимого) по заданному пути (и подкаталогам).
+***
+```
+mkdir -p /home/user/documents
+echo "Содержимое файла" > /home/user/documents/файл1.txt
+echo "Содержимое файла" > /home/user/documents/файл2.txt
+find /home/user/documents -type f -exec md5sum {} + | sort | uniq -w32 -d
+```
+![image](https://github.com/user-attachments/assets/91b367ea-55e2-412d-83db-c8ceac6520bc)
