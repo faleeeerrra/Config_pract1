@@ -107,8 +107,6 @@ fi
 echo "Команда $COMMAND успешно зарегистрирована в /usr/local/bin."
 ```
 ![image](https://github.com/user-attachments/assets/df90b789-6011-467e-b566-6560b36ef5dd)
-***
-
 
 # Task 6
 Написать программу для проверки наличия комментария в первой строке файлов с расширением c, js и py.
